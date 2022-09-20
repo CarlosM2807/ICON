@@ -1,0 +1,448 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#"
+     xml:base="http://www.semanticweb.org/usuario/ontologies/2021/10/familia"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia">
+        <rdfs:comment>Ontolgy to decribe family relations</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#IsDescendenciaOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#IsDescendenciaOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasAscendencia -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasAscendencia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasDescencencia -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasDescencencia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasEsposx -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasEsposx">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasPareja"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isEsposxOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Esposx"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Cónyuges"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasFraternidad -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasFraternidad">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasHermanx -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasHermanx">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasFraternidad"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isHermanxOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hermanx"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Familia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasHijx -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasHijx">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasDescencencia"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isHijxOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Descendiente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Antecesor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasPareja -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasPareja">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasPater -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasPater">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#hasAscendencia"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isPaterOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Ascendiente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Antecesor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isAscendenciaOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isAscendenciaOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isEsposxOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isEsposxOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isParejaOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Cónyuges"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Esposx"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isFraternidadOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isFraternidadOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isHermanxOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isHermanxOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isFraternidadOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Familia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hermanx"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isHijxOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isHijxOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#IsDescendenciaOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Antecesor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Descendiente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isParejaOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isParejaOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isPaterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isPaterOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#isAscendenciaOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Antecesor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Ascendiente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Abuela -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Abuela">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Abuelx"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Abuelo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Abuelo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Abuelx"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Abuelx -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Abuelx">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Familia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Antecesor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Antecesor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Ascendiente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Ascendiente">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Antecesor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Cónyuges -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Cónyuges"/>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Descendiente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Descendiente">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Antecesor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Esposa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Esposa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Esposx"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Esposo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Esposo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Esposx"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Esposx -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Esposx">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Cónyuges"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Familia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Familia"/>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hermana -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hermana">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hermanx"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hermano -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hermano">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hermanx"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hermanx -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hermanx">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Familia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hija -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hija">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hijx"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hijo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hijo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hijx"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hijx -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hijx">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Familia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Madre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Madre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Pater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Padre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Padre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Pater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Pater -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Pater">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Familia"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Eugenia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Eugenia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Abuela"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Esposa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Madre"/>
+        <isEsposxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Pedro"/>
+        <isPaterOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Lucia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Juan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Juan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Esposo"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Padre"/>
+        <isEsposxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Lucia"/>
+        <isPaterOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Luis"/>
+        <isPaterOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Maria"/>
+        <isPaterOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Sandra"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Lucia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Lucia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Esposa"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hija"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Madre"/>
+        <isEsposxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Juan"/>
+        <isHijxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Eugenia"/>
+        <isHijxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Pedro"/>
+        <isPaterOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Luis"/>
+        <isPaterOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Maria"/>
+        <isPaterOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Sandra"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Luis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Luis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hermano"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hijo"/>
+        <isHermanxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Maria"/>
+        <isHermanxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Sandra"/>
+        <isHijxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Juan"/>
+        <isHijxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Lucia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Maria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Maria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hermana"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hija"/>
+        <isHermanxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Luis"/>
+        <isHermanxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Sandra"/>
+        <isHijxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Juan"/>
+        <isHijxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Lucia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Pedro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Pedro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Abuelo"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Esposo"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Padre"/>
+        <isEsposxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Eugenia"/>
+        <isPaterOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Lucia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Sandra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Sandra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hermana"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Hija"/>
+        <isHermanxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Luis"/>
+        <isHermanxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Maria"/>
+        <isHijxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Juan"/>
+        <isHijxOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2021/10/familia#Lucia"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,556 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:absolute:Practica1#"
+     xml:base="urn:absolute:Practica1"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="urn:absolute:Practica1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:Practica1#esAscendienteDe -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#esAscendienteDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#esDescendienteDe -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#esDescendienteDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#esHermanaDe -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#esHermanaDe">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:Practica1#esHermanxDe"/>
+        <owl:inverseOf rdf:resource="urn:absolute:Practica1#tieneHermana"/>
+        <rdfs:domain rdf:resource="urn:absolute:Practica1#Familia"/>
+        <rdfs:range rdf:resource="urn:absolute:Practica1#Hermanx"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#esHermanoDe -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#esHermanoDe">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:Practica1#esHermanxDe"/>
+        <owl:inverseOf rdf:resource="urn:absolute:Practica1#tieneHermano"/>
+        <rdfs:domain rdf:resource="urn:absolute:Practica1#Familia"/>
+        <rdfs:range rdf:resource="urn:absolute:Practica1#Hermanx"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#esHermanxDe -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#esHermanxDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#esHijaDe -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#esHijaDe">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:Practica1#esDescendienteDe"/>
+        <owl:inverseOf rdf:resource="urn:absolute:Practica1#tieneHija"/>
+        <rdfs:domain rdf:resource="urn:absolute:Practica1#Familia"/>
+        <rdfs:range rdf:resource="urn:absolute:Practica1#Descendiente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#esHijoDe -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#esHijoDe">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:Practica1#esDescendienteDe"/>
+        <owl:inverseOf rdf:resource="urn:absolute:Practica1#tieneHijo"/>
+        <rdfs:domain rdf:resource="urn:absolute:Practica1#Familia"/>
+        <rdfs:range rdf:resource="urn:absolute:Practica1#Descendiente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#esMadreDe -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#esMadreDe">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:Practica1#esAscendienteDe"/>
+        <owl:inverseOf rdf:resource="urn:absolute:Practica1#tieneMadre"/>
+        <rdfs:domain rdf:resource="urn:absolute:Practica1#Familia"/>
+        <rdfs:range rdf:resource="urn:absolute:Practica1#Ascendiente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#esMaridoDe -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#esMaridoDe">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:Practica1#esParejaDe"/>
+        <owl:inverseOf rdf:resource="urn:absolute:Practica1#tieneMarido"/>
+        <rdfs:domain rdf:resource="urn:absolute:Practica1#Familia"/>
+        <rdfs:range rdf:resource="urn:absolute:Practica1#Pareja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#esMujerDe -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#esMujerDe">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:Practica1#esParejaDe"/>
+        <owl:inverseOf rdf:resource="urn:absolute:Practica1#tieneMujer"/>
+        <rdfs:domain rdf:resource="urn:absolute:Practica1#Familia"/>
+        <rdfs:range rdf:resource="urn:absolute:Practica1#Pareja"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#esPadreDe -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#esPadreDe">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:Practica1#esAscendienteDe"/>
+        <owl:inverseOf rdf:resource="urn:absolute:Practica1#tienePadre"/>
+        <rdfs:domain rdf:resource="urn:absolute:Practica1#Familia"/>
+        <rdfs:range rdf:resource="urn:absolute:Practica1#Ascendiente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#esParejaDe -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#esParejaDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#tieneAscendencia -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#tieneAscendencia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#tieneDescendencia -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#tieneDescendencia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#tieneHermana -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#tieneHermana">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:Practica1#tieneHermanx"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:Practica1#Hermanx"/>
+        <rdfs:range rdf:resource="urn:absolute:Practica1#Familia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#tieneHermano -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#tieneHermano">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:Practica1#tieneHermanx"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:Practica1#Hermanx"/>
+        <rdfs:range rdf:resource="urn:absolute:Practica1#Familia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#tieneHermanx -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#tieneHermanx">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#tieneHija -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#tieneHija">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:Practica1#tieneDescendencia"/>
+        <rdfs:domain rdf:resource="urn:absolute:Practica1#Descendiente"/>
+        <rdfs:range rdf:resource="urn:absolute:Practica1#Familia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#tieneHijo -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#tieneHijo">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:Practica1#tieneDescendencia"/>
+        <rdfs:domain rdf:resource="urn:absolute:Practica1#Descendiente"/>
+        <rdfs:range rdf:resource="urn:absolute:Practica1#Familia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#tieneMadre -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#tieneMadre">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:Practica1#tieneAscendencia"/>
+        <rdfs:domain rdf:resource="urn:absolute:Practica1#Ascendiente"/>
+        <rdfs:range rdf:resource="urn:absolute:Practica1#Familia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#tieneMarido -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#tieneMarido">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:Practica1#tienePareja"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:Practica1#Pareja"/>
+        <rdfs:range rdf:resource="urn:absolute:Practica1#Familia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#tieneMujer -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#tieneMujer">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:Practica1#tienePareja"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="urn:absolute:Practica1#Pareja"/>
+        <rdfs:range rdf:resource="urn:absolute:Practica1#Familia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#tienePadre -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#tienePadre">
+        <rdfs:subPropertyOf rdf:resource="urn:absolute:Practica1#tieneAscendencia"/>
+        <rdfs:domain rdf:resource="urn:absolute:Practica1#Ascendiente"/>
+        <rdfs:range rdf:resource="urn:absolute:Practica1#Familia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:Practica1#tienePareja -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:Practica1#tienePareja">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:Practica1#Abuela -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Abuela">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Abuelx"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Abuelo -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Abuelo">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Abuelx"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Abuelx -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Abuelx">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Familia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Ascendiente -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Ascendiente">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Descendencia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Descendencia -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Descendencia"/>
+    
+
+
+    <!-- urn:absolute:Practica1#Descendiente -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Descendiente">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Descendencia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Familia -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Familia"/>
+    
+
+
+    <!-- urn:absolute:Practica1#Femenino -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Femenino">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Genero"/>
+        <owl:disjointWith rdf:resource="urn:absolute:Practica1#Masculino"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Genero -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Genero"/>
+    
+
+
+    <!-- urn:absolute:Practica1#Hermana -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Hermana">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Hermanx"/>
+        <owl:disjointWith rdf:resource="urn:absolute:Practica1#Hermano"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Hermano -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Hermano">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Hermanx"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Hermanx -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Hermanx">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Familia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Hija -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Hija">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Hijx"/>
+        <owl:disjointWith rdf:resource="urn:absolute:Practica1#Hijo"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Hijo -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Hijo">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Hijx"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Hijx -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Hijx">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Familia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Madre -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Madre">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Padrx"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Marido -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Marido">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Pareja"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Masculino -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Masculino">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Genero"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Mujer -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Mujer">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Pareja"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Padre -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Padre">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Padrx"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Padrx -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Padrx">
+        <rdfs:subClassOf rdf:resource="urn:absolute:Practica1#Familia"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:Practica1#Pareja -->
+
+    <owl:Class rdf:about="urn:absolute:Practica1#Pareja"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:Practica1#Eugenia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Practica1#Eugenia">
+        <rdf:type rdf:resource="urn:absolute:Practica1#Abuela"/>
+        <rdf:type rdf:resource="urn:absolute:Practica1#Femenino"/>
+        <rdf:type rdf:resource="urn:absolute:Practica1#Madre"/>
+        <rdf:type rdf:resource="urn:absolute:Practica1#Mujer"/>
+        <esMadreDe rdf:resource="urn:absolute:Practica1#Lucia"/>
+        <esMujerDe rdf:resource="urn:absolute:Practica1#Pedro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Practica1#Juan -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Practica1#Juan">
+        <rdf:type rdf:resource="urn:absolute:Practica1#Marido"/>
+        <rdf:type rdf:resource="urn:absolute:Practica1#Masculino"/>
+        <rdf:type rdf:resource="urn:absolute:Practica1#Padre"/>
+        <esMaridoDe rdf:resource="urn:absolute:Practica1#Lucia"/>
+        <esPadreDe rdf:resource="urn:absolute:Practica1#Luis"/>
+        <esPadreDe rdf:resource="urn:absolute:Practica1#Maria"/>
+        <esPadreDe rdf:resource="urn:absolute:Practica1#Sandra"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Practica1#Lucia -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Practica1#Lucia">
+        <rdf:type rdf:resource="urn:absolute:Practica1#Femenino"/>
+        <rdf:type rdf:resource="urn:absolute:Practica1#Hija"/>
+        <rdf:type rdf:resource="urn:absolute:Practica1#Madre"/>
+        <rdf:type rdf:resource="urn:absolute:Practica1#Mujer"/>
+        <esHijaDe rdf:resource="urn:absolute:Practica1#Eugenia"/>
+        <esHijaDe rdf:resource="urn:absolute:Practica1#Pedro"/>
+        <esMadreDe rdf:resource="urn:absolute:Practica1#Luis"/>
+        <esMadreDe rdf:resource="urn:absolute:Practica1#Maria"/>
+        <esMadreDe rdf:resource="urn:absolute:Practica1#Sandra"/>
+        <esMujerDe rdf:resource="urn:absolute:Practica1#Juan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Practica1#Luis -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Practica1#Luis">
+        <rdf:type rdf:resource="urn:absolute:Practica1#Hermano"/>
+        <rdf:type rdf:resource="urn:absolute:Practica1#Hijo"/>
+        <rdf:type rdf:resource="urn:absolute:Practica1#Masculino"/>
+        <esHermanoDe rdf:resource="urn:absolute:Practica1#Maria"/>
+        <esHermanoDe rdf:resource="urn:absolute:Practica1#Sandra"/>
+        <esHijoDe rdf:resource="urn:absolute:Practica1#Juan"/>
+        <esHijoDe rdf:resource="urn:absolute:Practica1#Lucia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Practica1#Maria -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Practica1#Maria">
+        <rdf:type rdf:resource="urn:absolute:Practica1#Femenino"/>
+        <rdf:type rdf:resource="urn:absolute:Practica1#Hermana"/>
+        <rdf:type rdf:resource="urn:absolute:Practica1#Hija"/>
+        <esHermanaDe rdf:resource="urn:absolute:Practica1#Luis"/>
+        <esHermanaDe rdf:resource="urn:absolute:Practica1#Sandra"/>
+        <esHijaDe rdf:resource="urn:absolute:Practica1#Juan"/>
+        <esHijaDe rdf:resource="urn:absolute:Practica1#Lucia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Practica1#Pedro -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Practica1#Pedro">
+        <rdf:type rdf:resource="urn:absolute:Practica1#Abuelo"/>
+        <rdf:type rdf:resource="urn:absolute:Practica1#Marido"/>
+        <rdf:type rdf:resource="urn:absolute:Practica1#Masculino"/>
+        <rdf:type rdf:resource="urn:absolute:Practica1#Padre"/>
+        <esMaridoDe rdf:resource="urn:absolute:Practica1#Eugenia"/>
+        <esPadreDe rdf:resource="urn:absolute:Practica1#Lucia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:Practica1#Sandra -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:Practica1#Sandra">
+        <rdf:type rdf:resource="urn:absolute:Practica1#Femenino"/>
+        <rdf:type rdf:resource="urn:absolute:Practica1#Hermana"/>
+        <rdf:type rdf:resource="urn:absolute:Practica1#Hija"/>
+        <esHermanaDe rdf:resource="urn:absolute:Practica1#Luis"/>
+        <esHermanaDe rdf:resource="urn:absolute:Practica1#Maria"/>
+        <esHijaDe rdf:resource="urn:absolute:Practica1#Juan"/>
+        <esHijaDe rdf:resource="urn:absolute:Practica1#Lucia"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
